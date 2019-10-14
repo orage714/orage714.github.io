@@ -6,22 +6,15 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>react 知识点 | 小橘子的博客</title>
+  <title>Tag: git | 小橘子的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="1：State 的更新可能是异步的出于性能的考虑，react可能会把多个setState()的调用合并成一个调用。因为this.props和this.state可能会异步更新，所以不要依赖他们的值来更新状态。 新增生命周期getDerivedStateFromProps生命周期的意思就是[从props中获取state], 使用这个生命周期函数是为了替代componentWillReceivePro">
-<meta name="keywords" content="react">
-<meta property="og:type" content="article">
-<meta property="og:title" content="react 知识点">
-<meta property="og:url" content="http://yoursite.com/2019/07/10/react/index.html">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="小橘子的博客">
+<meta property="og:url" content="http://yoursite.com/tags/git/index.html">
 <meta property="og:site_name" content="小橘子的博客">
-<meta property="og:description" content="1：State 的更新可能是异步的出于性能的考虑，react可能会把多个setState()的调用合并成一个调用。因为this.props和this.state可能会异步更新，所以不要依赖他们的值来更新状态。 新增生命周期getDerivedStateFromProps生命周期的意思就是[从props中获取state], 使用这个生命周期函数是为了替代componentWillReceivePro">
 <meta property="og:locale" content="en">
-<meta property="og:image" content="http://yoursite.com/medias/page/set.jpg">
-<meta property="og:updated_time" content="2019-09-22T14:18:39.169Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="react 知识点">
-<meta name="twitter:description" content="1：State 的更新可能是异步的出于性能的考虑，react可能会把多个setState()的调用合并成一个调用。因为this.props和this.state可能会异步更新，所以不要依赖他们的值来更新状态。 新增生命周期getDerivedStateFromProps生命周期的意思就是[从props中获取state], 使用这个生命周期函数是为了替代componentWillReceivePro">
-<meta name="twitter:image" content="http://yoursite.com/medias/page/set.jpg">
+<meta name="twitter:title" content="小橘子的博客">
   
     <link rel="alternative" href="/atom.xml" title="小橘子的博客" type="application/atom+xml">
   
@@ -149,227 +142,60 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-react" class="article article-type-post " itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
+            
   
-    <h1 class="article-title" itemprop="name">
-      react 知识点
+  
+    
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2019" class="archive-year">2019</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/2019/10/14/git/" class="archive-article-date">
+  	<time datetime="2019-10-14T13:46:32.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-14</time>
+</a>
+        </div>
+    	 
+  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2019/10/14/git/">git版本管理工具</a>
     </h1>
   
 
-        
-        <a href="/2019/07/10/react/" class="archive-article-date">
-  	<time datetime="2019-07-10T13:32:10.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-10</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="1：State-的更新可能是异步的"><a href="#1：State-的更新可能是异步的" class="headerlink" title="1：State 的更新可能是异步的"></a>1：State 的更新可能是异步的</h2><p>出于性能的考虑，react可能会把多个setState()的调用合并成一个调用。<br>因为this.props和this.state可能会异步更新，所以不要依赖他们的值来更新状态。<br><img src="/medias/page/set.jpg" alt="state更新异步"></p>
-<h2 id="新增生命周期getDerivedStateFromProps"><a href="#新增生命周期getDerivedStateFromProps" class="headerlink" title="新增生命周期getDerivedStateFromProps"></a>新增生命周期getDerivedStateFromProps</h2><p>生命周期的意思就是[从props中获取state],</p>
-<h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><p>这个生命周期函数是为了替代componentWillReceiveProps存在的，所以在你需要使用componentWillReceiveProps的时候，就可以考虑使用getDerivedStateFromProps来进行替代了。<br>两者的参数是不相同的，而getDerivedStateFromProps是一个静态函数，也就是这个函数不能通过this访问到class的属性，也并不推荐直接访问属性。而是应该通过参数提供的nextProps以及prevState来进行判断，根据新传入的props来映射到state。</p>
-<p>作者：老鼠AI大米_Java全栈<br>链接：<a href="https://www.jianshu.com/p/50fe3fb9f7c3" target="_blank" rel="noopener">https://www.jianshu.com/p/50fe3fb9f7c3</a><br>来源：简书<br>简书著作权归作者所有，任何形式的转载都请联系作者获得授权并注明出处。<br>需要注意的是，如果props传入的内容不需要影响到你的state，那么就需要返回一个null，这个返回值是必须的，所以尽量将其写到函数的末尾。</p>
-<pre><code>static getDerivedStateFromProps(nextProps, prevState) {
-    const {type} = nextProps;
-    // 当传入的type发生变化的时候，更新state
-    if (type !== prevState.type) {
-        return {
-            type,
-        };
-    }
-    // 否则，对于state不进行任何操作
-    return null;
-}   </code></pre><h2 id="组织好你的组件"><a href="#组织好你的组件" class="headerlink" title="组织好你的组件"></a>组织好你的组件</h2><p>考虑一下，如果你的组件内部既需要修改自己的type，又需要接收从外部修改的type。</p>
-<p>是不是非常混乱？getDerivedStateFromProps中你根本不知道该做什么。</p>
-<pre><code>static getDerivedStateFromProps(nextProps, prevState) {
-    const {type} = nextProps;
-    // type可能由props驱动，也可能由state驱动，这样判断会导致state驱动的type被回滚
-    if (type !== prevState.type) {
-        return {
-            type,
-        };
-    }
-    // 否则，对于state不进行任何操作
-    return null;
-}</code></pre><p>好好组织你的组件，在非必须的时候，摒弃这种写法。type要么由props驱动，要么完全由state驱动。<br>如果实在没有办法解耦，那么就需要一个hack来辅助：绑定props到state上。</p>
-<pre><code>constructor(props) {
-    super(props);
-    this.state = {
-        type: 0,
-        props,
-    }
-}
-static getDerivedStateFromProps(nextProps, prevState) {
-    const {type, props} = nextProps;
-    // 这段代码可能看起来非常混乱，这个props可以被当做缓存，仅用作判断
-    if (type !== props.type) {
-        return {
-            type,
-            props: {
-                type,
-            },
-        };
-    }
-    // 否则，对于state不进行任何操作
-    return null;
-}</code></pre><p>上面的代码可以保证在进行多数据源驱动的时候，状态能够正确改变。当然，这样的代码很多情况下是会影响到别人阅读你的代码的，对于维护造成了非常大的困难。<br>从这个生命周期的更新来看，react更希望将受控的props和state进行分离，就如同Redux作者Dan Abramov在redux文档当中写的一样Presentational and Container Components，将所有的组件分离称为展示型组件和容器型组件，一个只负责接收props来改变自己的样式，一个负责保持其整个模块的state。这样可以让代码更加清晰。但是在实际的业务逻辑中，我们有时很难做到这一点，而且这样可能会导致容器型组件变得非常庞大以致难以管理，如何进行取舍还是需要根据实际场景决定的</p>
-<p>作者：老鼠AI大米_Java全栈<br>链接：<a href="https://www.jianshu.com/p/50fe3fb9f7c3" target="_blank" rel="noopener">https://www.jianshu.com/p/50fe3fb9f7c3</a><br>来源：简书<br>简书著作权归作者所有，任何形式的转载都请联系作者获得授权并注明出处。<br><a href="https://www.jianshu.com/p/50fe3fb9f7c3" target="_blank" rel="noopener">原文链接</a></p>
-<h2 id="iframe-嵌入页面的通讯"><a href="#iframe-嵌入页面的通讯" class="headerlink" title="iframe 嵌入页面的通讯"></a>iframe 嵌入页面的通讯</h2><p><a href="http://www.alloyteam.com/2013/11/the-second-version-universal-solution-iframe-cross-domain-communication/" target="_blank" rel="noopener">嵌入页面的通讯</a></p>
-<p><a href="https://www.jianshu.com/p/62f1c080748a" target="_blank" rel="noopener">嵌入页面的通讯postmessage</a></p>
-<h2 id="动态绑定ref"><a href="#动态绑定ref" class="headerlink" title="动态绑定ref"></a>动态绑定ref</h2><p><a href="https://blog.csdn.net/qq_39081974/article/details/90905936" target="_blank" rel="noopener">动态绑定ref</a></p>
-
-      
-
-      
-        <div class="page-reward">
-          <a href="javascript:;" class="page-reward-btn tooltip-top">
-            <div class="tooltip tooltip-east">
-            <span class="tooltip-item">
-              赏
-            </span>
-            <span class="tooltip-content">
-              <span class="tooltip-text">
-                <span class="tooltip-inner">
-                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
-                  <div class="reward-box">
-                    
-                    
-                  </div>
-                </span>
-              </span>
-            </span>
-          </div>
-          </a>
-        </div>
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
+        <div class="article-info info-on-right">
+          
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">react</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">git</a>
         		</li>
       		
 		</ul>
 	</div>
 
-      
+          
 
-      
-
-      
-        
-<div class="share-btn share-icons tooltip-left">
-  <div class="tooltip tooltip-east">
-    <span class="tooltip-item">
-      <a href="javascript:;" class="share-sns share-outer">
-        <i class="icon icon-share"></i>
-      </a>
-    </span>
-    <span class="tooltip-content">
-      <div class="share-wrap">
-        <div class="share-icons">
-          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
-            <i class="icon icon-weibo"></i>
-          </a>
-          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
-            <i class="icon icon-weixin"></i>
-          </a>
-          <a class="qq share-sns" href="javascript:;" data-type="qq">
-            <i class="icon icon-qq"></i>
-          </a>
-          <a class="douban share-sns" href="javascript:;" data-type="douban">
-            <i class="icon icon-douban"></i>
-          </a>
-          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
-            <i class="icon icon-qzone"></i>
-          </a>
-          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
-            <i class="icon icon-facebook"></i>
-          </a>
-          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
-            <i class="icon icon-twitter"></i>
-          </a>
-          <a class="google share-sns" href="javascript:;" data-type="google">
-            <i class="icon icon-google"></i>
-          </a>
         </div>
-      </div>
-    </span>
-  </div>
-</div>
-
-<div class="page-modal wx-share js-wx-box">
-    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
-    <p>扫一扫，分享到微信</p>
-    <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/07/10/react/" alt="微信分享二维码">
-    </div>
-</div>
-
-<div class="mask js-mask"></div>
-      
-      <div class="clearfix"></div>
-    </div>
+        <div class="clearfix"></div>
+    </header>
   </div>
 </article>
-
-  
-<nav id="article-nav">
-  
-    <a href="/2019/07/17/css-flex/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          css-flex
-        
-      </div>
-    </a>
   
   
-    <a href="/2019/07/07/My-New-Post/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">CSS 代码技巧</div>
-      <i class="icon-circle-right"></i>
-    </a>
-  
-</nav>
-
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-  
-  
+    </div></section>
   
 
-  
-
-  
-
-  
+    
 
 
           </div>
@@ -392,9 +218,9 @@ static getDerivedStateFromProps(nextProps, prevState) {
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: true,
+		isPost: false,
 		isArchive: false,
-		isTag: false,
+		isTag: true,
 		isCategory: false,
 		open_in_new: false,
 		toc_hide_index: true,

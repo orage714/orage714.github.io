@@ -144,6 +144,87 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-git" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/10/14/git/">git版本管理工具</a>
+    </h1>
+  
+
+        
+        <a href="/2019/10/14/git/" class="archive-article-date">
+  	<time datetime="2019-10-14T13:46:32.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-14</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="git-常用命令："><a href="#git-常用命令：" class="headerlink" title="git 常用命令："></a>git 常用命令：</h2><p>git fetch + git merge替代git pull命令<br>版本回退： git reset –hard Obfafd<br>查看提交记录：<br>   git log –pretty=oneline<br>   git reflog 可以查看所有分支的所有操作记录（包括已经被删除commit 记录和 reset 的操作）<br>   git log –pretty=format:”%h %s” –graph 图形</p>
+<h3 id="git-stash-用法：（保存到一个未完结变更的堆栈中）"><a href="#git-stash-用法：（保存到一个未完结变更的堆栈中）" class="headerlink" title="git stash 用法：（保存到一个未完结变更的堆栈中）"></a>git stash 用法：（保存到一个未完结变更的堆栈中）</h3><ol>
+<li>stash保存：<br> git stash save取代git stash命令，git stash save “描述信息”</li>
+<li>stash重新应用缓存：<br> 可以通过git stash pop命令恢复之前缓存的工作目录<br> 也可以使用git stash apply命令，将缓存堆栈中的stash多次应用到工作目录中，但并不删除stash拷贝。<br> 在使用git stash apply命令时可以通过名字指定使用哪个stash，默认使用最近的stash（即stash@{0}）。</li>
+<li>查看现有stash：<br> git stash list</li>
+<li>移除stash:<br>  git stash drop stash@{0}或者使用git stash clear命令，删除所有缓存的stash。</li>
+<li>查看指定stash的diff<br> git stash show在该命令后面添加-p或–patch可以查看特定stash的全部diff，</li>
+</ol>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">git</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/10/14/git/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-ts" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -678,6 +759,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">react</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">git</a>
               </li>
             
             <div class="clearfix"></div>
