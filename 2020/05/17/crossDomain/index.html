@@ -6,15 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives: 2019 | 小橘子的博客</title>
+  <title>跨域 | 小橘子的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="小橘子的博客">
-<meta property="og:url" content="http://yoursite.com/archives/2019/index.html">
+  <meta name="description" content="在总结跨域问题之前，就必须先了解为何会有同源策略，所谓端口、域名、协议相同才叫同源，同源政策的目的，是防止恶意网站窃取数据 同源限制1：无法读取不同源的Cookie、LocalStrage、indexDB2：无法获得不同源的DOM3：不能向不同源服务器发送请求 不受同源限制标签 script、img、iframe、link拥有src属性、可以跨域加载资源、不受同源策略限制 解决跨域方法：1、代理跨">
+<meta name="keywords" content="cross">
+<meta property="og:type" content="article">
+<meta property="og:title" content="跨域">
+<meta property="og:url" content="http://yoursite.com/2020/05/17/crossDomain/index.html">
 <meta property="og:site_name" content="小橘子的博客">
+<meta property="og:description" content="在总结跨域问题之前，就必须先了解为何会有同源策略，所谓端口、域名、协议相同才叫同源，同源政策的目的，是防止恶意网站窃取数据 同源限制1：无法读取不同源的Cookie、LocalStrage、indexDB2：无法获得不同源的DOM3：不能向不同源服务器发送请求 不受同源限制标签 script、img、iframe、link拥有src属性、可以跨域加载资源、不受同源策略限制 解决跨域方法：1、代理跨">
 <meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2020-05-17T05:47:20.206Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="小橘子的博客">
+<meta name="twitter:title" content="跨域">
+<meta name="twitter:description" content="在总结跨域问题之前，就必须先了解为何会有同源策略，所谓端口、域名、协议相同才叫同源，同源政策的目的，是防止恶意网站窃取数据 同源限制1：无法读取不同源的Cookie、LocalStrage、indexDB2：无法获得不同源的DOM3：不能向不同源服务器发送请求 不受同源限制标签 script、img、iframe、link拥有src属性、可以跨域加载资源、不受同源策略限制 解决跨域方法：1、代理跨">
   
     <link rel="alternative" href="/atom.xml" title="小橘子的博客" type="application/atom+xml">
   
@@ -142,212 +147,176 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-crossDomain" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      跨域
+    </h1>
+  
+
+        
+        <a href="/2020/05/17/crossDomain/" class="archive-article-date">
+  	<time datetime="2020-05-17T04:15:49.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-17</time>
+</a>
+        
+      </header>
     
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="在总结跨域问题之前，就必须先了解为何会有同源策略，"><a href="#在总结跨域问题之前，就必须先了解为何会有同源策略，" class="headerlink" title="在总结跨域问题之前，就必须先了解为何会有同源策略，"></a>在总结跨域问题之前，就必须先了解为何会有同源策略，</h4><p>所谓端口、域名、协议相同才叫同源，同源政策的目的，是防止恶意网站窃取数据</p>
+<h2 id="同源限制"><a href="#同源限制" class="headerlink" title="同源限制"></a>同源限制</h2><p>1：无法读取不同源的Cookie、LocalStrage、indexDB<br>2：无法获得不同源的DOM<br>3：不能向不同源服务器发送请求</p>
+<h2 id="不受同源限制"><a href="#不受同源限制" class="headerlink" title="不受同源限制"></a>不受同源限制</h2><p>标签 script、img、iframe、link拥有src属性、可以跨域加载资源、不受同源策略限制</p>
+<h2 id="解决跨域方法："><a href="#解决跨域方法：" class="headerlink" title="解决跨域方法："></a>解决跨域方法：</h2><h3 id="1、代理跨域"><a href="#1、代理跨域" class="headerlink" title="1、代理跨域"></a>1、代理跨域</h3><p>原理：跨域请求报错是因为浏览器禁止使用XHR对象向不同源的服务器地址发起发起HTTP请求。但是服务器可以向多个不同的服务器发送请求，不存在跨域问题。因此 我们可以让浏览器指向一个服务器发送请求，让这个代理服务器去不同的服务器上请求资源再返回给浏览器。从而解决跨域的问题。列如nginx代理服务器</p>
+<h3 id="2、CORS跨域"><a href="#2、CORS跨域" class="headerlink" title="2、CORS跨域"></a>2、CORS跨域</h3><p>cors需要浏览器和服务器的同时支持，整个cors通讯过程都是浏览器自动完成，开发的时候cors通讯和同源请求的代码是一样的，关键在于服务器，只要服务器实现了cors接口，就可以跨域通信<br>服务器要给接口的响应头设置：Access-Control-Allow-Origin:*</p>
+<h3 id="3、jsonp"><a href="#3、jsonp" class="headerlink" title="3、jsonp"></a>3、jsonp</h3><p>原理 利用script标签src属性不受同源影响，但只能发送GET请求,列如fetch-jsonp插件</p>
+<h3 id="4、document-domain跨域"><a href="#4、document-domain跨域" class="headerlink" title="4、document.domain跨域"></a>4、document.domain跨域</h3><p>列：<a href="http://www.damor.cn/a.htm和http://www.damor.cn/b.htm" target="_blank" rel="noopener">http://www.damor.cn/a.htm和http://www.damor.cn/b.htm</a><br>A页面和B页面的一级域相同二级域不同，浏览器可以通过设置document.domain共享cookie,另外，服务器也可以设置cookie的时候，指定所属域名为一级域名，这样的话，二级和三级域名不用做任何设置都可以读取cookie<br>注意：document.domain虽然可读写，但只能设置成自身或者是高一级的父域或主域必须相同，所以只能解决一级域相同二级域不同的跨域问题<br>只适用于cookie和iframe窗口，localStrage和indexDB无法使用</p>
+<h3 id="5、window-name跨域"><a href="#5、window-name跨域" class="headerlink" title="5、window.name跨域"></a>5、window.name跨域</h3><p>设置window.name属性。<br>应用场景：1、嵌入的iframe页面，2、location.href新开页面<br>优点:window.name的容量较大，可以放置较长字符串，缺点是必须监听子窗口window.name属性变化，影响网页的性能</p>
+<h3 id="6、postMessage"><a href="#6、postMessage" class="headerlink" title="6、postMessage"></a>6、postMessage</h3><p>H5引入了一个全新的API，跨文档通讯API（Cross-documentmessage），这个API给window对象新增了postMessage方法，无论是否同源，都允许跨窗口通讯，window.postMessage(message,targetOrigin,[transfer]),三个参数：<br>        message 发送的数据<br>        targetOrigin 用来指定哪些窗口能接收到消息事件，设置为*，表示无限制，设置为URI（发送消息的目标域名）<br>        transfer 可选，是一串和message同时传递的Transferable对象，这些对象的所有权将被转移消息的接收方，而发送方将不再保有所有权<br>另外接收方必须要有监听事件，否则发送消息时就会报错，window.addEeventListener(‘message’,onmessage);onmessage接收message事件包含三个属性：<br>data：传递过来的数据<br>origin：发送方窗口的origin，注意；这个origin不能保证是该窗口的当前或未来的origin，因为postMessage被调用后可能被导航到不同的位置<br>source：发送方窗口对象的引用，可以使用此来向不同origin的两个窗口之间建立双向通信<br>此方法必须要两个页面的配合</p>
+<h3 id="7、location-hash跨域"><a href="#7、location-hash跨域" class="headerlink" title="7、location.hash跨域"></a>7、location.hash跨域</h3><p>场景：嵌入的iframe窗口的父子窗口通信或者window.open打开的窗口通信<br>解决：父窗口改变子窗口的url#后面的部分，子窗口监听window.onhashchange事件，得到通知，读取window.location.hash解析出数据，同样子窗口也可以向父窗口传递数据</p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
       
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/10/14/git/" class="archive-article-date">
-  	<time datetime="2019-10-14T13:46:32.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-14</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/10/14/git/">git版本管理工具</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">git</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">cross</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/05/17/crossDomain/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/09/22/ts/" class="archive-article-date">
-  	<time datetime="2019-09-22T13:32:10.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-22</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2019/10/14/git/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">git版本管理工具</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/09/22/ts/">typescript 知识点</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">ts</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/07/17/css-flex/" class="archive-article-date">
-  	<time datetime="2019-07-17T13:46:32.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-17</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/07/17/css-flex/">css-flex</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">css</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/07/10/react/" class="archive-article-date">
-  	<time datetime="2019-07-10T13:32:10.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-10</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/07/10/react/">react 知识点</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">react</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/07/07/My-New-Post/" class="archive-article-date">
-  	<time datetime="2019-07-07T13:32:10.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-07</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/07/07/My-New-Post/">CSS 代码技巧</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">css</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
 
 
           </div>
@@ -370,8 +339,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,

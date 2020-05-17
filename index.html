@@ -144,6 +144,89 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-crossDomain" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/05/17/crossDomain/">跨域</a>
+    </h1>
+  
+
+        
+        <a href="/2020/05/17/crossDomain/" class="archive-article-date">
+  	<time datetime="2020-05-17T04:15:49.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-17</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="在总结跨域问题之前，就必须先了解为何会有同源策略，"><a href="#在总结跨域问题之前，就必须先了解为何会有同源策略，" class="headerlink" title="在总结跨域问题之前，就必须先了解为何会有同源策略，"></a>在总结跨域问题之前，就必须先了解为何会有同源策略，</h4><p>所谓端口、域名、协议相同才叫同源，同源政策的目的，是防止恶意网站窃取数据</p>
+<h2 id="同源限制"><a href="#同源限制" class="headerlink" title="同源限制"></a>同源限制</h2><p>1：无法读取不同源的Cookie、LocalStrage、indexDB<br>2：无法获得不同源的DOM<br>3：不能向不同源服务器发送请求</p>
+<h2 id="不受同源限制"><a href="#不受同源限制" class="headerlink" title="不受同源限制"></a>不受同源限制</h2><p>标签 script、img、iframe、link拥有src属性、可以跨域加载资源、不受同源策略限制</p>
+<h2 id="解决跨域方法："><a href="#解决跨域方法：" class="headerlink" title="解决跨域方法："></a>解决跨域方法：</h2><h3 id="1、代理跨域"><a href="#1、代理跨域" class="headerlink" title="1、代理跨域"></a>1、代理跨域</h3><p>原理：跨域请求报错是因为浏览器禁止使用XHR对象向不同源的服务器地址发起发起HTTP请求。但是服务器可以向多个不同的服务器发送请求，不存在跨域问题。因此 我们可以让浏览器指向一个服务器发送请求，让这个代理服务器去不同的服务器上请求资源再返回给浏览器。从而解决跨域的问题。列如nginx代理服务器</p>
+<h3 id="2、CORS跨域"><a href="#2、CORS跨域" class="headerlink" title="2、CORS跨域"></a>2、CORS跨域</h3><p>cors需要浏览器和服务器的同时支持，整个cors通讯过程都是浏览器自动完成，开发的时候cors通讯和同源请求的代码是一样的，关键在于服务器，只要服务器实现了cors接口，就可以跨域通信<br>服务器要给接口的响应头设置：Access-Control-Allow-Origin:*</p>
+<h3 id="3、jsonp"><a href="#3、jsonp" class="headerlink" title="3、jsonp"></a>3、jsonp</h3><p>原理 利用script标签src属性不受同源影响，但只能发送GET请求,列如fetch-jsonp插件</p>
+<h3 id="4、document-domain跨域"><a href="#4、document-domain跨域" class="headerlink" title="4、document.domain跨域"></a>4、document.domain跨域</h3><p>列：<a href="http://www.damor.cn/a.htm和http://www.damor.cn/b.htm" target="_blank" rel="noopener">http://www.damor.cn/a.htm和http://www.damor.cn/b.htm</a><br>A页面和B页面的一级域相同二级域不同，浏览器可以通过设置document.domain共享cookie,另外，服务器也可以设置cookie的时候，指定所属域名为一级域名，这样的话，二级和三级域名不用做任何设置都可以读取cookie<br>注意：document.domain虽然可读写，但只能设置成自身或者是高一级的父域或主域必须相同，所以只能解决一级域相同二级域不同的跨域问题<br>只适用于cookie和iframe窗口，localStrage和indexDB无法使用</p>
+<h3 id="5、window-name跨域"><a href="#5、window-name跨域" class="headerlink" title="5、window.name跨域"></a>5、window.name跨域</h3><p>设置window.name属性。<br>应用场景：1、嵌入的iframe页面，2、location.href新开页面<br>优点:window.name的容量较大，可以放置较长字符串，缺点是必须监听子窗口window.name属性变化，影响网页的性能</p>
+<h3 id="6、postMessage"><a href="#6、postMessage" class="headerlink" title="6、postMessage"></a>6、postMessage</h3><p>H5引入了一个全新的API，跨文档通讯API（Cross-documentmessage），这个API给window对象新增了postMessage方法，无论是否同源，都允许跨窗口通讯，window.postMessage(message,targetOrigin,[transfer]),三个参数：<br>        message 发送的数据<br>        targetOrigin 用来指定哪些窗口能接收到消息事件，设置为*，表示无限制，设置为URI（发送消息的目标域名）<br>        transfer 可选，是一串和message同时传递的Transferable对象，这些对象的所有权将被转移消息的接收方，而发送方将不再保有所有权<br>另外接收方必须要有监听事件，否则发送消息时就会报错，window.addEeventListener(‘message’,onmessage);onmessage接收message事件包含三个属性：<br>data：传递过来的数据<br>origin：发送方窗口的origin，注意；这个origin不能保证是该窗口的当前或未来的origin，因为postMessage被调用后可能被导航到不同的位置<br>source：发送方窗口对象的引用，可以使用此来向不同origin的两个窗口之间建立双向通信<br>此方法必须要两个页面的配合</p>
+<h3 id="7、location-hash跨域"><a href="#7、location-hash跨域" class="headerlink" title="7、location.hash跨域"></a>7、location.hash跨域</h3><p>场景：嵌入的iframe窗口的父子窗口通信或者window.open打开的窗口通信<br>解决：父窗口改变子窗口的url#后面的部分，子窗口监听window.onhashchange事件，得到通知，读取window.location.hash解析出数据，同样子窗口也可以向父窗口传递数据</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">cross</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/05/17/crossDomain/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-git" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -675,7 +758,7 @@ static getDerivedStateFromProps(nextProps, prevState) {
   <div class="outer">
     <div id="footer-info">
     	<div class="footer-left">
-    		&copy; 2019 orage714
+    		&copy; 2020 orage714
     	</div>
       	<div class="footer-right">
       		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
@@ -763,6 +846,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">git</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">cross</a>
               </li>
             
             <div class="clearfix"></div>
