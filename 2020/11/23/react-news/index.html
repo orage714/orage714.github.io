@@ -6,15 +6,17 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>小橘子的博客</title>
+  <title>react-news | 小橘子的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="小橘子的博客">
-<meta property="og:url" content="http://yoursite.com/index.html">
+  <meta name="keywords" content="react">
+<meta property="og:type" content="article">
+<meta property="og:title" content="react-news">
+<meta property="og:url" content="http://yoursite.com/2020/11/23/react-news/index.html">
 <meta property="og:site_name" content="小橘子的博客">
 <meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2020-11-23T14:32:06.535Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="小橘子的博客">
+<meta name="twitter:title" content="react-news">
   
     <link rel="alternative" href="/atom.xml" title="小橘子的博客" type="application/atom+xml">
   
@@ -142,16 +144,14 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-    <article id="post-react-news" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+            <article id="post-react-news" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/11/23/react-news/">react-news</a>
+    <h1 class="article-title" itemprop="name">
+      react-news
     </h1>
   
 
@@ -168,519 +168,26 @@
       
 
       
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">react</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/11/23/react-news/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
         </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-crossDomain" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/05/17/crossDomain/">跨域</a>
-    </h1>
-  
-
-        
-        <a href="/2020/05/17/crossDomain/" class="archive-article-date">
-  	<time datetime="2020-05-17T04:15:49.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-17</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h4 id="在总结跨域问题之前，就必须先了解为何会有同源策略，"><a href="#在总结跨域问题之前，就必须先了解为何会有同源策略，" class="headerlink" title="在总结跨域问题之前，就必须先了解为何会有同源策略，"></a>在总结跨域问题之前，就必须先了解为何会有同源策略，</h4><p>所谓端口、域名、协议相同才叫同源，同源政策的目的，是防止恶意网站窃取数据</p>
-<h2 id="同源限制"><a href="#同源限制" class="headerlink" title="同源限制"></a>同源限制</h2><p>1：无法读取不同源的Cookie、LocalStrage、indexDB<br>2：无法获得不同源的DOM<br>3：不能向不同源服务器发送请求</p>
-<h2 id="不受同源限制"><a href="#不受同源限制" class="headerlink" title="不受同源限制"></a>不受同源限制</h2><p>标签 script、img、iframe、link拥有src属性、可以跨域加载资源、不受同源策略限制</p>
-<h2 id="解决跨域方法："><a href="#解决跨域方法：" class="headerlink" title="解决跨域方法："></a>解决跨域方法：</h2><h3 id="1、代理跨域"><a href="#1、代理跨域" class="headerlink" title="1、代理跨域"></a>1、代理跨域</h3><p>原理：跨域请求报错是因为浏览器禁止使用XHR对象向不同源的服务器地址发起发起HTTP请求。但是服务器可以向多个不同的服务器发送请求，不存在跨域问题。因此 我们可以让浏览器指向一个服务器发送请求，让这个代理服务器去不同的服务器上请求资源再返回给浏览器。从而解决跨域的问题。列如nginx代理服务器</p>
-<h3 id="2、CORS跨域"><a href="#2、CORS跨域" class="headerlink" title="2、CORS跨域"></a>2、CORS跨域</h3><p>cors需要浏览器和服务器的同时支持，整个cors通讯过程都是浏览器自动完成，开发的时候cors通讯和同源请求的代码是一样的，关键在于服务器，只要服务器实现了cors接口，就可以跨域通信<br>服务器要给接口的响应头设置：Access-Control-Allow-Origin:*</p>
-<h3 id="3、jsonp"><a href="#3、jsonp" class="headerlink" title="3、jsonp"></a>3、jsonp</h3><p>原理 利用script标签src属性不受同源影响，但只能发送GET请求,列如fetch-jsonp插件</p>
-<h3 id="4、document-domain跨域"><a href="#4、document-domain跨域" class="headerlink" title="4、document.domain跨域"></a>4、document.domain跨域</h3><p>列：<a href="http://www.damor.cn/a.htm和http://www.damor.cn/b.htm" target="_blank" rel="noopener">http://www.damor.cn/a.htm和http://www.damor.cn/b.htm</a><br>A页面和B页面的一级域相同二级域不同，浏览器可以通过设置document.domain共享cookie,另外，服务器也可以设置cookie的时候，指定所属域名为一级域名，这样的话，二级和三级域名不用做任何设置都可以读取cookie<br>注意：document.domain虽然可读写，但只能设置成自身或者是高一级的父域或主域必须相同，所以只能解决一级域相同二级域不同的跨域问题<br>只适用于cookie和iframe窗口，localStrage和indexDB无法使用</p>
-<h3 id="5、window-name跨域"><a href="#5、window-name跨域" class="headerlink" title="5、window.name跨域"></a>5、window.name跨域</h3><p>设置window.name属性。<br>应用场景：1、嵌入的iframe页面，2、location.href新开页面<br>优点:window.name的容量较大，可以放置较长字符串，缺点是必须监听子窗口window.name属性变化，影响网页的性能</p>
-<h3 id="6、postMessage"><a href="#6、postMessage" class="headerlink" title="6、postMessage"></a>6、postMessage</h3><p>H5引入了一个全新的API，跨文档通讯API（Cross-documentmessage），这个API给window对象新增了postMessage方法，无论是否同源，都允许跨窗口通讯，window.postMessage(message,targetOrigin,[transfer]),三个参数：<br>        message 发送的数据<br>        targetOrigin 用来指定哪些窗口能接收到消息事件，设置为*，表示无限制，设置为URI（发送消息的目标域名）<br>        transfer 可选，是一串和message同时传递的Transferable对象，这些对象的所有权将被转移消息的接收方，而发送方将不再保有所有权<br>另外接收方必须要有监听事件，否则发送消息时就会报错，window.addEeventListener(‘message’,onmessage);onmessage接收message事件包含三个属性：<br>data：传递过来的数据<br>origin：发送方窗口的origin，注意；这个origin不能保证是该窗口的当前或未来的origin，因为postMessage被调用后可能被导航到不同的位置<br>source：发送方窗口对象的引用，可以使用此来向不同origin的两个窗口之间建立双向通信<br>此方法必须要两个页面的配合</p>
-<h3 id="7、location-hash跨域"><a href="#7、location-hash跨域" class="headerlink" title="7、location.hash跨域"></a>7、location.hash跨域</h3><p>场景：嵌入的iframe窗口的父子窗口通信或者window.open打开的窗口通信<br>解决：父窗口改变子窗口的url#后面的部分，子窗口监听window.onhashchange事件，得到通知，读取window.location.hash解析出数据，同样子窗口也可以向父窗口传递数据</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">cross</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/05/17/crossDomain/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-git" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/10/14/git/">git版本管理工具</a>
-    </h1>
-  
-
-        
-        <a href="/2019/10/14/git/" class="archive-article-date">
-  	<time datetime="2019-10-14T13:46:32.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-14</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="git-常用命令："><a href="#git-常用命令：" class="headerlink" title="git 常用命令："></a>git 常用命令：</h2><p>git fetch + git merge替代git pull命令<br>版本回退： git reset –hard Obfafd<br>查看提交记录：<br>   git log –pretty=oneline<br>   git reflog 可以查看所有分支的所有操作记录（包括已经被删除commit 记录和 reset 的操作）<br>   git log –pretty=format:”%h %s” –graph 图形</p>
-<h3 id="git-stash-用法：（保存到一个未完结变更的堆栈中）"><a href="#git-stash-用法：（保存到一个未完结变更的堆栈中）" class="headerlink" title="git stash 用法：（保存到一个未完结变更的堆栈中）"></a>git stash 用法：（保存到一个未完结变更的堆栈中）</h3><ol>
-<li>stash保存：<br> git stash save取代git stash命令，git stash save “描述信息”</li>
-<li>stash重新应用缓存：<br> 可以通过git stash pop命令恢复之前缓存的工作目录<br> 也可以使用git stash apply命令，将缓存堆栈中的stash多次应用到工作目录中，但并不删除stash拷贝。<br> 在使用git stash apply命令时可以通过名字指定使用哪个stash，默认使用最近的stash（即stash@{0}）。</li>
-<li>查看现有stash：<br> git stash list</li>
-<li>移除stash:<br>  git stash drop stash@{0}或者使用git stash clear命令，删除所有缓存的stash。</li>
-<li>查看指定stash的diff<br> git stash show在该命令后面添加-p或–patch可以查看特定stash的全部diff，</li>
-</ol>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">git</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/10/14/git/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-ts" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/09/22/ts/">typescript 知识点</a>
-    </h1>
-  
-
-        
-        <a href="/2019/09/22/ts/" class="archive-article-date">
-  	<time datetime="2019-09-22T13:32:10.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-22</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="1、类型："><a href="#1、类型：" class="headerlink" title="1、类型："></a>1、类型：</h2><p>  1-1、基础数据类型<br>        字符串    :string<br>        布尔      :boolean<br>        数字      :number<br>        数组      :number[]<br>        元祖      [string,number]<br>        枚举      enum weeks{ mon,tue,wed}<br>                     eg: let day:weeks=weeks.mon<br>        任何类型   :any<br>        没有      :void<br>                    underfund、null<br>  1-2、联合类型</p>
-<pre><code>    let  x:number | string | boolean;
-类型推论：
-    let  a=3;// 数字类型
-    let b;  // any任意类型
-类型断言
-       let c:any=&apos;this is a string&apos;;
-       let stlength:number=(&lt;string&gt;c).length;// 13
-  等同 let stlength1:number=(c as string).length;</code></pre><h2 id="2、接口（行为抽象）【作用：提取一组相同的方法，可以起到约束规范】："><a href="#2、接口（行为抽象）【作用：提取一组相同的方法，可以起到约束规范】：" class="headerlink" title="2、接口（行为抽象）【作用：提取一组相同的方法，可以起到约束规范】："></a>2、接口（行为抽象）【作用：提取一组相同的方法，可以起到约束规范】：</h2><pre><code>2-1 类的约束
-
-    // 接口定义(interface)
-    interface Iprinter{
-        printing(msg:string):string;// 接口内定义的方法，接受msg字符串参数，返回值为字符串
-    }
-    // 实现接口(implements)
-    class colorPrinter implements Iprinter{  // 实现多个接口逗号分割即可
-        printing(msg:string):string{
-            return `打印${msg}成功！`
-        }
-    }
-    // 接口的继承
-    interface newter extends oldter{}
-
-注：1.定义接口，只定义声明即可，不包含具体内容。
-    2.实现接口要实现里面的内容。
-    3.实现多个接口逗号分隔
-
-2-2 函数的约束
-
-interface myfn{
-    (a:string,b:number):boolean; // 函数myfn接受字符串参数a，数字参数b，返回值我布尔类型
-}</code></pre><p>   2-3 数组的约束</p>
-<pre><code>interface isArr{
-    [index:number]:string;
-}
-
-let arr:isArr=[&apos;a&apos;,&apos;b&apos;]</code></pre><p>   2-4 json的约束</p>
-<p>   interface isData{<br>       name:string,<br>       email?:string, // 可无属性<br>     readonly age:number;  // readonly  只读属性<br>   }</p>
-<p>   总结：interface 定义接口<br>        extends 继承 super() 继承父类<br>        implements 实现接口<br>        ?: 可选属性<br>        readonly 只读属性</p>
-<h2 id="3、-类："><a href="#3、-类：" class="headerlink" title="3、 类："></a>3、 类：</h2><p>  3-1 类的定义<br>    class person{<br>        name:string;<br>        age:number;<br>        constructor(name:string,age:number){<br>            this.name=name;<br>            this.age=age;<br>        }<br>        prin(){<br>            return this.name+”:”+this.age;<br>        }</p>
-<pre><code>}
-3-2 类的继承 extends
- class studend extends person{
-     cardNumber:number;
-     school:string;
- }
-let stu1=new studend(&apos;张三&apos;,19);
-stu1.cardNumber=1001;
-stu1.school=&apos;北大&apos;;</code></pre><h2 id="4、访问修饰符："><a href="#4、访问修饰符：" class="headerlink" title="4、访问修饰符："></a>4、访问修饰符：</h2><pre><code>public：默认值 公有的
-private: 私有的 外面的不可访问
-protected: 受保护的，自身和子类可以访问</code></pre><h2 id="5、-静态属性和静态方法-static："><a href="#5、-静态属性和静态方法-static：" class="headerlink" title="5、 静态属性和静态方法 static："></a>5、 静态属性和静态方法 static：</h2><pre><code>注：静态属性和静态方法，调用直接点（.）的形式，而实列方法需要new实例化，默认实列化</code></pre><h2 id="6、多态-继承同一父类的方法产生不同形态："><a href="#6、多态-继承同一父类的方法产生不同形态：" class="headerlink" title="6、多态-继承同一父类的方法产生不同形态："></a>6、多态-继承同一父类的方法产生不同形态：</h2><h2 id="7、抽象类-抽象方法-abstract："><a href="#7、抽象类-抽象方法-abstract：" class="headerlink" title="7、抽象类|抽象方法 abstract："></a>7、抽象类|抽象方法 abstract：</h2><pre><code>注：1、抽象类是其它类继承的父类，不能直接被实列
-    2、抽象方法只能包含在抽象类中，抽象类中可以抽象方法和非抽象方法
-    3、子类继承抽象类，实现抽象方法
-
-    // 定义
-    abstract class animal{
-        abstract eat();
-        run（）{ alert(&apos;非抽象类方法&apos;)}
-    }</code></pre><h2 id="8、函数（定义、参数、重载）："><a href="#8、函数（定义、参数、重载）：" class="headerlink" title="8、函数（定义、参数、重载）："></a>8、函数（定义、参数、重载）：</h2><pre><code>// 定义
-function (x,y):number{ 
-    return x+y 
-    };
-// 参数 
-function add(a,b,...x:number[]):number{}
-// 重载
-function getinfo(name:string):void;
-function getinfo(age:number):void;
-function getinfo(str:any):void{
-    switch(typeof str):
-    case &apos;string&apos;:
-        console.log(`名字：${str}`);
-        break;
-    case &apos;number&apos;:
-        console.log(`年龄${str}`);
-        break;
-    default:
-        console.log(str);
-        break;
-};</code></pre>
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">ts</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/09/22/ts/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-css-flex" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/07/17/css-flex/">css-flex</a>
-    </h1>
-  
-
-        
-        <a href="/2019/07/17/css-flex/" class="archive-article-date">
-  	<time datetime="2019-07-17T13:46:32.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-17</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>flex:<br>     容器属性：display:flex | inline-flex;<br>       flex-direction: row | row-reverse | column |column-reverse  项目排列反向<br>         简写： flex-flow<br>       flex-wrap: nowrap | wrap | wrap-reverse  项目如何换行<br>       justify-content: flex-start | flex-end | center | space-between | space-around  项目水平轴对齐方式<br>       align-items:  stretch | flex-start | flex-end | center | baseline               项目Y轴对齐方式<br>    项目属性：<br>      order 排列<br>      flex-grow：0  剩余放大比列倍数  默认0不放大<br>      flex-shrink：1  空间不足缩小比列倍数 默认1 空间不足项目将缩小        简写 ： flex<br>      flex-basis:    auto  定义项目占据空间大小<br>      align-self: auto  允许单个项目Y轴不一样的对齐方式 ，覆盖align-items,取值和align-items一样</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">css</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/07/17/css-flex/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-react" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/07/10/react/">react 知识点</a>
-    </h1>
-  
-
-        
-        <a href="/2019/07/10/react/" class="archive-article-date">
-  	<time datetime="2019-07-10T13:32:10.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-10</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="1：State-的更新可能是异步的"><a href="#1：State-的更新可能是异步的" class="headerlink" title="1：State 的更新可能是异步的"></a>1：State 的更新可能是异步的</h2><p>出于性能的考虑，react可能会把多个setState()的调用合并成一个调用。<br>因为this.props和this.state可能会异步更新，所以不要依赖他们的值来更新状态。<br><img src="/medias/page/set.jpg" alt="state更新异步"></p>
-<h2 id="新增生命周期getDerivedStateFromProps"><a href="#新增生命周期getDerivedStateFromProps" class="headerlink" title="新增生命周期getDerivedStateFromProps"></a>新增生命周期getDerivedStateFromProps</h2><p>生命周期的意思就是[从props中获取state],</p>
-<h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><p>这个生命周期函数是为了替代componentWillReceiveProps存在的，所以在你需要使用componentWillReceiveProps的时候，就可以考虑使用getDerivedStateFromProps来进行替代了。<br>两者的参数是不相同的，而getDerivedStateFromProps是一个静态函数，也就是这个函数不能通过this访问到class的属性，也并不推荐直接访问属性。而是应该通过参数提供的nextProps以及prevState来进行判断，根据新传入的props来映射到state。</p>
-<p>作者：老鼠AI大米_Java全栈<br>链接：<a href="https://www.jianshu.com/p/50fe3fb9f7c3" target="_blank" rel="noopener">https://www.jianshu.com/p/50fe3fb9f7c3</a><br>来源：简书<br>简书著作权归作者所有，任何形式的转载都请联系作者获得授权并注明出处。<br>需要注意的是，如果props传入的内容不需要影响到你的state，那么就需要返回一个null，这个返回值是必须的，所以尽量将其写到函数的末尾。</p>
-<pre><code>static getDerivedStateFromProps(nextProps, prevState) {
-    const {type} = nextProps;
-    // 当传入的type发生变化的时候，更新state
-    if (type !== prevState.type) {
-        return {
-            type,
-        };
-    }
-    // 否则，对于state不进行任何操作
-    return null;
-}   </code></pre><h2 id="组织好你的组件"><a href="#组织好你的组件" class="headerlink" title="组织好你的组件"></a>组织好你的组件</h2><p>考虑一下，如果你的组件内部既需要修改自己的type，又需要接收从外部修改的type。</p>
-<p>是不是非常混乱？getDerivedStateFromProps中你根本不知道该做什么。</p>
-<pre><code>static getDerivedStateFromProps(nextProps, prevState) {
-    const {type} = nextProps;
-    // type可能由props驱动，也可能由state驱动，这样判断会导致state驱动的type被回滚
-    if (type !== prevState.type) {
-        return {
-            type,
-        };
-    }
-    // 否则，对于state不进行任何操作
-    return null;
-}</code></pre><p>好好组织你的组件，在非必须的时候，摒弃这种写法。type要么由props驱动，要么完全由state驱动。<br>如果实在没有办法解耦，那么就需要一个hack来辅助：绑定props到state上。</p>
-<pre><code>constructor(props) {
-    super(props);
-    this.state = {
-        type: 0,
-        props,
-    }
-}
-static getDerivedStateFromProps(nextProps, prevState) {
-    const {type, props} = nextProps;
-    // 这段代码可能看起来非常混乱，这个props可以被当做缓存，仅用作判断
-    if (type !== props.type) {
-        return {
-            type,
-            props: {
-                type,
-            },
-        };
-    }
-    // 否则，对于state不进行任何操作
-    return null;
-}</code></pre><p>上面的代码可以保证在进行多数据源驱动的时候，状态能够正确改变。当然，这样的代码很多情况下是会影响到别人阅读你的代码的，对于维护造成了非常大的困难。<br>从这个生命周期的更新来看，react更希望将受控的props和state进行分离，就如同Redux作者Dan Abramov在redux文档当中写的一样Presentational and Container Components，将所有的组件分离称为展示型组件和容器型组件，一个只负责接收props来改变自己的样式，一个负责保持其整个模块的state。这样可以让代码更加清晰。但是在实际的业务逻辑中，我们有时很难做到这一点，而且这样可能会导致容器型组件变得非常庞大以致难以管理，如何进行取舍还是需要根据实际场景决定的</p>
-<p>作者：老鼠AI大米_Java全栈<br>链接：<a href="https://www.jianshu.com/p/50fe3fb9f7c3" target="_blank" rel="noopener">https://www.jianshu.com/p/50fe3fb9f7c3</a><br>来源：简书<br>简书著作权归作者所有，任何形式的转载都请联系作者获得授权并注明出处。<br><a href="https://www.jianshu.com/p/50fe3fb9f7c3" target="_blank" rel="noopener">原文链接</a></p>
-<h2 id="iframe-嵌入页面的通讯"><a href="#iframe-嵌入页面的通讯" class="headerlink" title="iframe 嵌入页面的通讯"></a>iframe 嵌入页面的通讯</h2><p><a href="http://www.alloyteam.com/2013/11/the-second-version-universal-solution-iframe-cross-domain-communication/" target="_blank" rel="noopener">嵌入页面的通讯</a></p>
-<p><a href="https://www.jianshu.com/p/62f1c080748a" target="_blank" rel="noopener">嵌入页面的通讯postmessage</a></p>
-<h2 id="动态绑定ref"><a href="#动态绑定ref" class="headerlink" title="动态绑定ref"></a>动态绑定ref</h2><p><a href="https://blog.csdn.net/qq_39081974/article/details/90905936" target="_blank" rel="noopener">动态绑定ref</a></p>
-
-      
-
       
     </div>
     <div class="article-info article-info-index">
@@ -700,16 +207,75 @@ static getDerivedStateFromProps(nextProps, prevState) {
       
 
       
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/07/10/react/">展开全文 >></a>
-        </p>
-      
 
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/11/23/react-news/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
       
       <div class="clearfix"></div>
     </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
+  
+  
+    <a href="/2020/05/17/crossDomain/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">跨域</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -729,98 +295,14 @@ static getDerivedStateFromProps(nextProps, prevState) {
 
 
 
-
   
-    <article id="post-My-New-Post" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/07/07/My-New-Post/">CSS 代码技巧</a>
-    </h1>
   
 
-        
-        <a href="/2019/07/07/My-New-Post/" class="archive-article-date">
-  	<time datetime="2019-07-07T13:32:10.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-07</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>1、使用flex进行布局</p>
-<p>flex弹性布局的出现是有原因的。浮动和inline-block虽然也能实现很多的布局效果，但它们本质上是文本和块元素布局的工具，而不是面向整个网页的。flex可以很容易的按照我们预期的方式创建布局。</p>
-<p>2.所有元素设置为Border-box</p>
-<p>大多数初学者都不知道box-sizing这个属性，但实际上它非常重要。box-sizing属性有两个值：</p>
-<p>content-box（默认） - 当我们设置一个元素的宽度或高度时，就是设置它的内容的大小。所有的padding和边框值都不包含。例如，一个div的宽度设置为100，padding为10，于是这个元素将占用120像素（100+2*10）。<br>border-box - padding与边框包含在元素的宽度或高度中，一个设置为width: 100px和box-sizing:<br>border-box的div元素，他的总宽度就是100px，无论它的内边距和边框有多少。</p>
-<p>将所有元素都设置为border-box，可以更轻松的改变元素的大小，而不必担心padding或者border值会将元素撑开变形或者换行显示。</p>
-<p>3.将图片作为背景</p>
-<p>当给页面添加图片时，尤其需要图片是响应式的时候，最好使用background属性来引入图片，而不是img标签。</p>
-<p>这看起来使用图片会更复杂，但实际上它会使设置图片的样式变得更加容易。有了background-size, background-position和其它的属性，保持或改变图片原始尺寸和宽高比会更方便。</p>
-<p>background引入图片的一个缺点是页面的Web可访问性会受到轻微的影响，因为屏幕阅读器和搜索引擎无法正确地获取到图像。这个问题可以通过CSS <a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/object-fit" target="_blank" rel="noopener">object-fit</a>属性解决，到目前为止除了IE浏览器其他的浏览器都可以使用object-fit</p>
-<p>4.不要使用!important</p>
-<p>说真的，不要使用!important。现在看起来可以快速的解决问题，但最终可能会导致大量的重写。相反，我们应该花点时间找到CSS选择器不工作的原因并更改它。<br>唯一可以使用的!important的地方是当您想要覆盖HTML中的内联样式时，但是内联样式同样也是一个坏的习惯，应该尽量的避免。</p>
-<p>8.使用AutoPrefixer达到更好的兼容性</p>
-<p>浏览器前缀是CSS中最烦人的事情之一，每个属性需要的前缀是不一致的，你永远不知道到底需要哪一个，如果真的要把它一个一个手动添加到样式表中，那无疑是一个无聊的噩梦。</p>
-<p>值得庆幸的是，有工具可以自动为我们提供添加浏览器前缀的功能，甚至可以决定需要支持哪些浏览器：<br>在线工具：Autoprefixer<br>文本编辑器插件：Sublime Text, Atom<br>代码库：Autoprefixer (PostCSS)</p>
-<p>9.Caniuse</p>
-<p>对于CSS的属性Web浏览器仍然存在许多兼容性不一致的地方。使用caniuse来检查您使用的属性是否得到了广泛的支持？是否需要前缀？或者是否在某个浏览器中使用有要注意的地方？有了caniuse你在写CSS时就会更得心应手了。</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">css</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/07/07/My-New-Post/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
+  
 
   
+
   
 
 
@@ -843,8 +325,8 @@ static getDerivedStateFromProps(nextProps, prevState) {
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
