@@ -6,17 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>react-news | 小橘子的博客</title>
+  <title>react-hooks | 小橘子的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="keywords" content="react">
+  <meta name="description" content="面试问题：源码，事件执行机制，react版本差异这些state的更新机制就行 hook优势在哪，和class组件有哪些差异答：函数式组件性能更好 规避了传统的生命周期，开发更方便利于封装组件,hooks组件复用逻辑相对于HOC更易维护 useState 维护组件状态useEffect:处理副作用默认情况下，效果会在每个完成的渲染之后运行，但是可以选择仅在某些值更改后才触发效果。 useContex">
+<meta name="keywords" content="react">
 <meta property="og:type" content="article">
-<meta property="og:title" content="react-news">
+<meta property="og:title" content="react-hooks">
 <meta property="og:url" content="http://yoursite.com/2020/11/23/react-news/index.html">
 <meta property="og:site_name" content="小橘子的博客">
+<meta property="og:description" content="面试问题：源码，事件执行机制，react版本差异这些state的更新机制就行 hook优势在哪，和class组件有哪些差异答：函数式组件性能更好 规避了传统的生命周期，开发更方便利于封装组件,hooks组件复用逻辑相对于HOC更易维护 useState 维护组件状态useEffect:处理副作用默认情况下，效果会在每个完成的渲染之后运行，但是可以选择仅在某些值更改后才触发效果。 useContex">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2020-11-23T14:32:06.535Z">
+<meta property="og:updated_time" content="2020-12-11T12:09:44.521Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="react-news">
+<meta name="twitter:title" content="react-hooks">
+<meta name="twitter:description" content="面试问题：源码，事件执行机制，react版本差异这些state的更新机制就行 hook优势在哪，和class组件有哪些差异答：函数式组件性能更好 规避了传统的生命周期，开发更方便利于封装组件,hooks组件复用逻辑相对于HOC更易维护 useState 维护组件状态useEffect:处理副作用默认情况下，效果会在每个完成的渲染之后运行，但是可以选择仅在某些值更改后才触发效果。 useContex">
   
     <link rel="alternative" href="/atom.xml" title="小橘子的博客" type="application/atom+xml">
   
@@ -151,7 +154,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      react-news
+      react-hooks
     </h1>
   
 
@@ -164,7 +167,16 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <h2 id="面试问题："><a href="#面试问题：" class="headerlink" title="面试问题："></a>面试问题：</h2><p>源码，事件执行机制，react版本差异这些<br>state的更新机制就行</p>
+<p>hook优势在哪，和class组件有哪些差异<br>答：函数式组件性能更好 规避了传统的生命周期，开发更方便利于封装组件,hooks组件复用逻辑相对于HOC更易维护</p>
+<h3 id="useState-维护组件状态"><a href="#useState-维护组件状态" class="headerlink" title="useState 维护组件状态"></a>useState 维护组件状态</h3><h3 id="useEffect-处理副作用"><a href="#useEffect-处理副作用" class="headerlink" title="useEffect:处理副作用"></a>useEffect:处理副作用</h3><p>默认情况下，效果会在每个完成的渲染之后运行，但是可以选择仅在某些值更改后才触发效果。</p>
+<h3 id="useContext-监听-provider-更新变化"><a href="#useContext-监听-provider-更新变化" class="headerlink" title="useContext 监听 provider 更新变化"></a>useContext 监听 provider 更新变化</h3><p>接受从MyContext=React.createContext返回的值，&lt;MyContext.Provider value={向下传递的值}&gt;，<br>获取的值const value = useContext(MyContext);</p>
+<p>额外的</p>
+<h3 id="useReducer-同redux的工作原理"><a href="#useReducer-同redux的工作原理" class="headerlink" title="useReducer 同redux的工作原理"></a>useReducer 同redux的工作原理</h3><p>const [state, dispatch] = useReducer(reducer, initialState);</p>
+<p>useReducer接受两个参数 第一个参数是一个reducer函数，第二个是初始值,返回数组state、dispatch方法，<br>用户触发dispatch方法发送对象 定义type类型，reducer函数接收两个参数 state、action,根据action.type作出不同的逻辑处理并返回新的state</p>
+<h3 id="useCallback与useMemo"><a href="#useCallback与useMemo" class="headerlink" title="useCallback与useMemo"></a>useCallback与useMemo</h3><p>从概念上还是很好理解的 一个上【缓存函数】一个是【函数的返回值】，但一般不熟悉的人很少使用<br>使用场景：<br>1、会成为其他useEffect依赖项的方法，建议使用useCallback包裹，当然也可以直接写在useEffect中<br>2、如果fn会作为props传递给子组件，一定要使用useCallback包裹，（对于子组件来说，如果每次render都会导致传递的函数发生变化，不利于react做渲染优化）<br>useMemo可以做为性能优化的手段，但并不稳定，将来react可能会遗弃</p>
+<h3 id="useRef"><a href="#useRef" class="headerlink" title="useRef"></a>useRef</h3><p>useRef返回一个ref对象,用于绑定组件上获取所绑组件的实列</p>
+
       
 
       
@@ -396,11 +408,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">react</a>
+                <a href="javascript:void(0)" class="js-tag color4">git</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">git</a>
+                <a href="javascript:void(0)" class="js-tag color1">react</a>
               </li>
              
               <li class="article-tag-list-item">
